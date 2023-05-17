@@ -21,6 +21,10 @@ class LoginPage extends Page {
         return $('input[data-test="login-button"]');
     }
 
+    get errorMessage(){
+        return $('h3[data-test="error"]')
+    }
+
     /**
      * a method to encapsule automation code to interact with the page
      * e.g. to login using username and password

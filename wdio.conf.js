@@ -24,6 +24,7 @@ export const config = {
     //
     specs: [
         ['./test/specs/login.e2e.js',
+        './test/specs/checkout.step.one.page.e2e.js',
         './test/specs/checkout.complete.e2e.js']
     ],
     // Patterns to exclude.
