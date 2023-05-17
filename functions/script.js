@@ -1,3 +1,15 @@
+
+function printFibonacci(num){
+    let fibArr = [0, 1];
+
+    for (let i = 2; i <= num; i++){
+        fibArr[i] = fibArr[i - 2] + fibArr[i - 1];
+    }
+    console.log(fibArr);
+}
+
+printFibonacci(50);
+
 // This function prints numbers in reverse order starting from the given number.
 // Parameter: num - The number from which the reverse order starts.
 
@@ -36,14 +48,3 @@ function printNumberSwap(a, b){
 }
 
 printNumberSwap(5, 10);
-
-// This function swaps the values of two variables using destructuring assignment.
-// Parameters: a - The first number to swap.
-//             b - The second number to swap.
-function printNumberSwap2(a, b){
-    console.log("1:"+ a, "2:"+ b);
-    [a, b] = [b, a];
-    console.log("1:"+ a, "2:" + b);
-}
-
-printNumberSwap2(5, 10);
