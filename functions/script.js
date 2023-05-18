@@ -1,5 +1,7 @@
-// This function checks if a number is Prime.
-// Parameter - The number of which we want to check is prime or not.
+/** 
+    *This function verifies if the given number is prime number.
+    *@param {number} num 
+    */
 function isPrime(num) {
 if (num < 2) {
     return false;
@@ -13,9 +15,11 @@ for (let i = 2; i < n - 1; i++) {
 
 return true;
 }
-// This function prints the prime numbers in a given range.
-// Parameters - min: the lowest number in the range
-//            - max: the highest number in the range
+/** 
+    *This function prints the prime numbers in the given range.
+    *@param {number} min
+    *@param {number} max 
+    */
 function printPrimeNumbers(min, max) {
 const primes = [];
 
@@ -30,8 +34,10 @@ console.log(primes)
 
 printPrimeNumbers(1, 50);
 
-// This function prints the fibonacci sequence up until the given number.
-// Parameter: num - The given number to continue printing the fibonacci sequence up to.
+/** 
+    *This function prints the fibonacci sequence up until the given number.
+    *@param {number} num
+    */
 function printFibonacci(num){
     let fibArr = [0, 1];
 
@@ -43,9 +49,10 @@ function printFibonacci(num){
 
 printFibonacci(50);
 
-// This function prints numbers in reverse order starting from the given number.
-// Parameter: num - The number from which the reverse order starts.
-
+/** 
+    *This function prints numbers in reverse order starting from the given number.
+    *@param {number} num
+    */
 function printReverseOrder(num){
     for(let i = num; i >= 0; i--){
         console.log(i)
@@ -54,8 +61,10 @@ function printReverseOrder(num){
 
 printReverseOrder(50);
 
-// This function prints the factorial of the given number.
-// Parameters: num - The number from which we find the factorial.
+/** 
+    *This function prints the factorial of the given number.
+    *@param {number} num
+    */
 function printFactorial(num){
     let ans = 1;
     if (num === 0 || num === 1){
@@ -69,9 +78,11 @@ function printFactorial(num){
 
 printFactorial(5);
 
-// This function swaps the values of two variables using arithmetic operations.
-// Parameters: a - The first number to swap.
-//             b - The second number to swap.
+/** 
+    *This function swaps the values of two variables using arithmetic operations.
+    *@param {number} a
+    *@param {number} b
+    */
 function printNumberSwap(a, b){
     console.log("1:" + a, "2:"+ b);
     a = a + b;

@@ -25,6 +25,7 @@ export const config = {
     specs: [
         ['./test/specs/login.page.e2e.js',
         './test/specs/inventory.page.e2e.js',
+        './test/specs/cart.page.e2e.js',
         './test/specs/checkout.step.one.page.e2e.js',
         'test/specs/checkout.step.two.page.e2e.js',
         './test/specs/checkout.complete.page.e2e.js']
