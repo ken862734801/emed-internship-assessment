@@ -2,6 +2,9 @@ import CheckoutCompletePage from "../pageobjects/checkout.complete.page.js";
 
 describe("The Checkout Complete Page", () => {
 
+    it("should render the correct header title", async () => {
+        expect(await CheckoutCompletePage.headerTitle.getText()).toEqual("Checkout: Complete!");
+    })
     it("should render the green checkmark image", async () => {
         await CheckoutCompletePage.open();
 

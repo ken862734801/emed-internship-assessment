@@ -1,4 +1,31 @@
+function isPrime(num) {
+if (num < 2) {
+    return false;
+}
 
+for (let i = 2; i <= Math.sqrt(num); i++) {
+    if (num % i === 0) {
+    return false;
+    }
+}
+
+return true;
+}
+  
+function printPrimeNumbers(min, max) {
+const primes = [];
+
+for (let i = min; i <= max; i++){
+    if(isPrime(i)){
+        primes.push(i)
+    }
+}
+
+console.log(primes)
+}
+
+printPrimeNumbers(1, 50);
+   
 function printFibonacci(num){
     let fibArr = [0, 1];
 

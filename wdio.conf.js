@@ -23,9 +23,11 @@ export const config = {
     // will be called from there.
     //
     specs: [
-        ['./test/specs/login.e2e.js',
+        ['./test/specs/login.page.e2e.js',
+        './test/specs/inventory.page.e2e.js',
         './test/specs/checkout.step.one.page.e2e.js',
-        './test/specs/checkout.complete.e2e.js']
+        'test/specs/checkout.step.two.page.e2e.js',
+        './test/specs/checkout.complete.page.e2e.js']
     ],
     // Patterns to exclude.
     exclude: [
@@ -88,7 +90,7 @@ export const config = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-    baseUrl: 'http://localhost',
+    baseUrl: 'https://saucedemo.com',
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
