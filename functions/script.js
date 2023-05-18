@@ -1,9 +1,11 @@
+// This function checks if a number is Prime.
+// Parameter - The number of which we want to check is prime or not.
 function isPrime(num) {
 if (num < 2) {
     return false;
 }
 
-for (let i = 2; i <= Math.sqrt(num); i++) {
+for (let i = 2; i < n - 1; i++) {
     if (num % i === 0) {
     return false;
     }
@@ -11,7 +13,9 @@ for (let i = 2; i <= Math.sqrt(num); i++) {
 
 return true;
 }
-  
+// This function prints the prime numbers in a given range.
+// Parameters - min: the lowest number in the range
+//            - max: the highest number in the range
 function printPrimeNumbers(min, max) {
 const primes = [];
 
@@ -25,7 +29,9 @@ console.log(primes)
 }
 
 printPrimeNumbers(1, 50);
-   
+
+// This function prints the fibonacci sequence up until the given number.
+// Parameter: num - The given number to continue printing the fibonacci sequence up to.
 function printFibonacci(num){
     let fibArr = [0, 1];
 

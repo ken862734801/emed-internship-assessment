@@ -6,18 +6,19 @@ describe('The Login Page', () => {
     beforeEach(async () => {
         await LoginPage.open();
     })
-    it('should login with valid credentials', async () => {
-        await LoginPage.login('standard_user', 'secret_sauce')
-    
-        expect(await browser.getUrl()).toEqual('https://www.saucedemo.com/inventory.html');
-    })
 
     it('should display the error message with invalid credentials', async () => {
-        await LoginPage.login("false_user", "false_sauce")
+        await LoginPage.login("locked_out_user", "secret_sauce")
 
         const isErrorMessageDisplayed = await LoginPage.errorMessage.isDisplayed();
         expect(isErrorMessageDisplayed).toEqual(true)
 
+    })
+
+    it('should login with valid credentials', async () => {
+        await LoginPage.login('standard_user', 'secret_sauce')
+    
+        expect(await browser.getUrl()).toEqual('https://www.saucedemo.com/inventory.html');
     })
 })
 
