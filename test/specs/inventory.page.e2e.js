@@ -18,14 +18,14 @@ describe("The Inventory Page", () => {
 
             await expect(button).toHaveElementClassContaining('btn_secondary');
             await expect(button).toHaveText('Remove');
-            await expect(InventoryPage.shoppingCartLink).toHaveText(1);
+            await expect(InventoryPage.shoppingCartLink).toHaveText("1");
 
 
             button.click();
 
             await expect(button).toHaveElementClassContaining('btn_primary');
             await expect(button).toHaveText('Add to cart');
-            await expect(InventoryPage.shoppingCartLink).toHaveText(0);
+            await expect(InventoryPage.shoppingCartLink).toHaveText("0");
 
         }
     })
