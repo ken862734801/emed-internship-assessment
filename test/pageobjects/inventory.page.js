@@ -8,6 +8,9 @@ class InventoryPage extends Page {
     get inventoryButtons (){
         return $$('button[class="btn_inventory"]')
     }
+    get addSauceLabsBackpackBtn (){
+        return $('button[data-test="add-to-cart-sauce-labs-backpack"]')
+    }
     get shoppingCartLink (){
         return $('a[class="shopping_cart_link"]')
     }
