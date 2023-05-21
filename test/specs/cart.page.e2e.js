@@ -5,6 +5,16 @@ describe("The Cart Page", () => {
     it("should return the correct header title", async () => {
         expect(await CartPage.headerTitle.getText()).toEqual("Your Cart")
     })
+    it("should remove the cart item on remove button click", async () => {
+        await InventoryPage.open();
+        await InventoryPage.addSauceLabsBackpackBtn.click();
+        await expect(InventoryPage.shoppingCartLink).toHaveText("1");
+        await InventoryPage.viewShoppingCart();
+
+        await CartPage.remove();
+        const isCartItemDisplayed = await CartPage.cartItem.isDisplayed();
+        expect(await isCartItemDisplayed).toEqual(false);
+    })
     it("should display the cart item", async () => {
         await InventoryPage.open();
         await InventoryPage.addSauceLabsBackpackBtn.click();
